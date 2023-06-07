@@ -1,73 +1,89 @@
-* {
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
-.container {
+body{
+    background: url(./Assets/bg-mobile-dark.jpg) no-repeat top center/cover;
+}
+
+body *{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffff;
+}
+
+.container{
+    /*border: 1px solid red;*/
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding-top: 3rem;
-    background-color: #f1f1f1;
+
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 50px;
+
     height: 100vh;
 }
 
 .container h1{
-    color: #175cff;
+    display: flex;
+    position:absolute;
+    top: 10%;
+
+    left: 45%;
+    /*border: 1px solid red;*/
 }
 
+/* Caixa do contador*/
 .timer{
+    /*border: 1px solid red;*/
     display: flex;
     font-size: 55px;
+
     font-weight: bold;
-    color: #333;
 }
 
-.time{
+.time {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    color: #172953;
-    min-width: 90px;
-}
 
-.separator{
-    padding: 0 10px;
-    color: #525763;
+    margin: 10px;
+    color: #ffff;
+    min-width: 90px;
 }
 
 #milliseconds{
     font-size: 30px;
-    color: #525763;
+    font-weight: lighter;
 }
 
+.separator{
+    padding: 0 10px;
+    font-weight: lighter;
+}
+
+/*Botões*/
 .buttons{
+    /*border: 1px solid red;*/
     display: flex;
     gap: 1rem;
 }
 
 .btn{
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+
     border-radius: 30px;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 5px solid #d72638;
+
+    background-color: #272047;
+    color: #ffff;
     transition: all 0.2 ease-in-out;
 }
 
 .btn:hover{
     transform: scale(1.1);
-}
-
-#startBtn{
-    background-color: #175cff;
-    color: #fff;
-}
-
-#pauseBtn, #resumeBtn {
-    display:none;
 }
