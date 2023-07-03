@@ -1,45 +1,62 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    background: url(./Assets/bg-mobile-dark.jpg) no-repeat top center/cover;
-}
-
-body *{
     font-family: 'Montserrat', sans-serif;
-    color: #ffff;
-}
-
-.container{
-    /*border: 1px solid red;*/
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: #480CA8;
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    justify-content: center;
-    gap: 3rem;
-    padding-top: 50px;
-
-    height: 100vh;
 }
 
+/*Titulo Stopwatch*/
 .container h1{
     display: flex;
-    position:absolute;
-    top: 10%;
+    align-items: center;
+    justify-content: center;
 
-    left: 45%;
-    /*border: 1px solid red;*/
+    color: white;
+    padding: 30px;
+
+    font-size: 30px;
+    font-weight: bold;
 }
 
-/* Caixa do contador*/
-.timer{
-    /*border: 1px solid red;*/
-    display: flex;
-    font-size: 55px;
 
+/*Círculo externo e interno*/
+.outer-circle{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inner-circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #480CA8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Fonte dentro do relógio*/
+.timer{
+    display: flex;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -48,9 +65,9 @@ body *{
     align-items: center;
     justify-content: center;
 
-    margin: 10px;
+    
     color: #ffff;
-    min-width: 90px;
+    min-width: 70px;
 }
 
 #milliseconds{
@@ -59,31 +76,96 @@ body *{
 }
 
 .separator{
-    padding: 0 10px;
     font-weight: lighter;
+    color: white;
 }
+
+
 
 /*Botões*/
 .buttons{
-    /*border: 1px solid red;*/
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    
+    width: 250px;
+    margin-top: 30px;
+    
 }
 
 .btn{
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
+    width: 70px;
+    height: 70px;
+    
+    font-size: 15px;
+    font-weight: lighter;
 
-    border-radius: 30px;
+    border-radius: 50%;
     cursor: pointer;
-    border: 5px solid #d72638;
+    border: 2px solid white;
 
-    background-color: #272047;
+    background-color: #480CA8;
     color: #ffff;
     transition: all 0.2 ease-in-out;
+
 }
 
 .btn:hover{
+    background-color: white;
+    color: #480CA8;
     transform: scale(1.1);
+}
+
+
+/*Voltas - Lista*/
+.laps{
+    list-style: none;
+    color: white;
+    width: 250px;
+    height: 250px;
+
+    overflow: auto; 
+    position: relative;
+    margin-top: 30px;
+}
+
+.laps::-webkit-scrollbar{
+    display: none;
+}
+
+.lap-item{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+
+    text-align: center;
+    border: 3px solid #F72585;
+    border-radius: 50px;
+
+    margin-bottom: 15px;
+}
+
+.time-lap{
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lap-clear-button{
+    display: block;
+    position: fixed;
+    z-index: 1000;
+
+    bottom: 35px;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 130px;
+    padding: 10px 0;
+    border-radius: 50px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid white;
+}
+
+.display-none{
+    display: none;
 }
